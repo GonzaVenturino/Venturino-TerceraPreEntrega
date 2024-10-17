@@ -1,0 +1,13 @@
+{% extends 'mi_app/base.html' %}
+
+{% block content %}
+<h2>Resultados de la búsqueda</h2>
+<ul>
+    {% for producto in productos %}
+        <li>{{ producto.nombre }} - {{ producto.precio }}</li>
+    {% empty %}
+        <li>No se encontraron productos.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'buscar_producto' %}">Volver a buscar</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi web{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a mi web</h1>
+        <nav>
+            <a href="{% url 'agregar_producto' %}">Agregar Producto</a>
+            <a href="{% url 'listar_productos' %}">Ver Productos</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
